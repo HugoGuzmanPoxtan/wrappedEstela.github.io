@@ -1,0 +1,155 @@
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#dateInput {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#submitDate {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #b8b8ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitDate:hover {
+  background: #ffd8be;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+  #openDateModal {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+#openDateModal {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: unset;
+  right: unset;
+}
+
+#openDateModal:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+
+
+.modal{
+  border-radius: 56.00000000000001px;
+  isolation: isolate;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 40%;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+.modal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 56.00000000000001px;
+  box-shadow: inset 0 0 15px -5px #000000;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.modal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 56.00000000000001px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+}
+
+.modal::before,
+.modal::after {
+  pointer-events: none;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.glass-title {
+  position: relative;
+  color: #9381ff;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+
+.glass-subtitle {
+  position: relative;
+  color: #2a1e5c;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  background-image: linear-gradient(#ffffff 1.1rem, #ccc 1.2rem);
+  background-size: 100% 1.2rem;
+}
+
+
